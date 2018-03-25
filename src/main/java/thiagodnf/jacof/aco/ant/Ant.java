@@ -20,6 +20,35 @@ import thiagodnf.jacof.aco.graph.AntType;
  */
 public class Ant extends Observable implements Runnable{
 
+
+	/**
+	 * Importance of the pheromones values
+	 */
+	protected double alpha;
+
+	/**
+	 * Importance of the heuristic information
+	 */
+	protected double beta;
+
+	public double getAlpha() {
+		return alpha;
+	}
+
+	public void setAlpha(double alpha) {
+		this.alpha = alpha;
+	}
+
+	public double getBeta() {
+		return beta;
+	}
+
+	public void setBeta(double beta) {
+		this.beta = beta;
+	}
+
+
+
 	/** Identifier */
 	protected int id;
 	

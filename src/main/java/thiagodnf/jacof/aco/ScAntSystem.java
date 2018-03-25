@@ -1,6 +1,7 @@
 package thiagodnf.jacof.aco;
 
 import thiagodnf.jacof.aco.ant.generators.AntColonyGenerator;
+import thiagodnf.jacof.aco.ant.generators.IndependentAntsColonyGenerator;
 import thiagodnf.jacof.aco.graph.AntType;
 import thiagodnf.jacof.aco.graph.initialization.FixedValueInitialization;
 import thiagodnf.jacof.aco.rule.globalupdate.deposit.anttypebased.AntTypeBasedDeposit;
@@ -33,7 +34,8 @@ public class ScAntSystem extends ACO {
     @Override
     protected void initializeAnts() {
         LOGGER.debug("Initializing the ants");
-        this.ants = AntColonyGenerator.generate(numberOfAnts, this);
+//        this.ants = AntColonyGenerator.generate(numberOfAnts, this);
+        this.ants = IndependentAntsColonyGenerator.generate(numberOfAnts, this);
 
     }
 

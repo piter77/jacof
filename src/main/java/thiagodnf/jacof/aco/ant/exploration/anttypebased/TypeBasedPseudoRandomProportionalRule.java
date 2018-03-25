@@ -27,8 +27,11 @@ public class TypeBasedPseudoRandomProportionalRule extends PseudoRandomProportio
 
             checkState(aco.getGraph().getTau(ant.getAntType(), i, j) != 0.0, "The tau(i,j) should not be 0.0 "+i + " " + j);
 
-            tij[j] = Math.pow(aco.getGraph().getTau(ant.getAntType(), i, j), aco.getAlpha());
-            nij[j] = Math.pow(aco.getProblem().getNij(i, j), aco.getBeta());
+            // TODO: per ant below
+            tij[j] = Math.pow(aco.getGraph().getTau(ant.getAntType(), i, j), ant.getAlpha());
+            nij[j] = Math.pow(aco.getProblem().getNij(i, j), ant.getBeta());
+//            tij[j] = Math.pow(aco.getGraph().getTau(ant.getAntType(), i, j), aco.getAlpha());
+//            nij[j] = Math.pow(aco.getProblem().getNij(i, j), aco.getBeta());
 
             sum += tij[j] * nij[j];
         }

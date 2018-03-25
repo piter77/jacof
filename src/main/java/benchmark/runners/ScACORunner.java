@@ -110,7 +110,7 @@ public class ScACORunner implements Runner{
                 .withACO(scAntSystem)
                 .withAcoName("ScAntSystem")
                 .withInstance(instance)
-                .withIteration(300)
+                .withIteration(100)
                 .withVisualization(false)
 //                .withDiversity(false, false, false)
                 .withOutput(new CSV("acoElistic.csv", 99))
